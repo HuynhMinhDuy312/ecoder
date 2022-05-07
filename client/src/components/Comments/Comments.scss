@@ -1,0 +1,64 @@
+$grayColor: #989898;
+$bluePrimary: #00ACEE;
+$orangePrimary: #F0592A;
+
+.comment {
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 12px;
+    
+    &__avatar {
+        width: 35px;
+        border-radius: 50%;
+    }
+
+    &__content {
+        padding-right: 12%;
+    }
+
+    &__bubble {
+        padding: 10px 12px;
+        background-color: #f2f3f5;
+        border-radius: 20px;
+        margin-left: 12px;
+        margin-bottom: 12px;
+    }
+
+    &__username {
+        font-size: 1.6rem;
+        font-weight: 600;
+        line-height: 2rem;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+
+    &__misc {
+        display: flex;
+        align-items: center;
+        margin: 20px 0;
+        margin-left: 16px;
+    }
+
+    &__like,
+    &__answer {
+        color: $bluePrimary;
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+
+    &__dot {
+        font-size: 0.2rem;
+        opacity: 0.5;
+        margin: 0 8px;
+    }
+
+    &__postat {
+        color: $grayColor;
+        font-size: 1.6rem;
+    }
+}

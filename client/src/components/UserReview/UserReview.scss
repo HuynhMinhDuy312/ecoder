@@ -1,0 +1,52 @@
+$grayColor: #989898;
+$bluePrimary: #00acee;
+$orangePrimary: #f0592a;
+
+.userreview {
+    margin: 36px 0;
+    box-sizing: border-box;
+    pointer-events: none;
+
+    &__user {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    &__avatar {
+        width: 40px;
+        border-radius: 50%;
+    }
+
+    &__username {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-left: 12px;
+    }
+
+    &__empty {
+        opacity: 0.5;
+        margin-right: 10px;
+    }
+
+    &__full {
+        color: rgb(255, 255, 0);
+        margin-right: 10px;
+    }
+
+    &__score {
+        font-size: 1.6rem;
+        font-weight: 600;
+    }
+
+    &__timestamp {
+        font-size: 1.4rem;
+        line-height: 3rem;
+    }
+
+    &__comment {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        text-align: justify;
+    }
+}

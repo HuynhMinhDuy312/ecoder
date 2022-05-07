@@ -1,0 +1,59 @@
+/******************************************
+*  Author : Nam Dinh   
+*  Created On : Mon Apr 25 2022
+*  File : LessonNavigation.module.scss
+*******************************************/
+@use '@assets/scss/color.scss';
+@use '@assets/scss/attr.scss';
+
+.nav {
+    padding-left: 12px;
+    width: 100%;
+    height: attr.$lessonNavHeight;
+    position: fixed;
+    top: 0;
+    background-color: color.$black;
+    color: color.$white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    z-index: 1000;
+
+    .leftNav {
+        display: flex;
+        align-items: center;
+
+        &Icon {
+            font-size: 2.4rem;
+            margin: 0 24px;
+            cursor: pointer;
+        }
+
+        &Logo {
+            border-radius: 50%;
+            height: 36px;
+            margin-right: 12px;
+            cursor: pointer;
+        }
+
+        &Title {
+            font-size: 2rem;
+            font-weight: 600;
+        }
+    }
+
+    .rightNav {
+        display: flex;
+        align-items: center;
+
+        &LearningStatus {
+            font-size: 1.8rem;
+            margin-right: 24px;
+
+            span {
+                margin-right: 4px;
+            }
+        }
+    }
+}

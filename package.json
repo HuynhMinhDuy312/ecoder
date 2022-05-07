@@ -1,0 +1,136 @@
+{
+    "name": "ecoder",
+    "version": "0.0.0",
+    "scripts": {
+        "build": "./node_modules/.bin/ts-node build.ts",
+        "lint": "eslint . --ext .ts",
+        "start": "node -r module-alias/register ./dist --env=production",
+        "start:dev": "nodemon",
+        "concurrently": "concurrently \"npm run start\" \"npm run --prefix client start\"",
+        "test": "nodemon --config ./spec/nodemon.json",
+        "test:no-reloading": "./node_modules/.bin/ts-node -r tsconfig-paths/register ./spec"
+    },
+    "nodemonConfig": {
+        "watch": [
+            "./"
+        ],
+        "ext": "ts, html",
+        "ignore": [
+            "client"
+        ],
+        "exec": "./node_modules/.bin/ts-node -r tsconfig-paths/register ./"
+    },
+    "_moduleAliases": {
+        "@services": "dist/services",
+        "@services/*": "dist/services/*",
+        "@repos": "dist/data/repos",
+        "@repos/*": "dist/data/repos/*",
+        "@models": "dist/data/models",
+        "@models/*": "dist/data/models/*",
+        "@shared": "dist/views/shared",
+        "@shared/*": "dist/views/shared/*",
+        "@server": "dist/server",
+        "@server/*": "dist/server/*",
+        "@routes": "dist/views/routes",
+        "@routes/*": "dist/views/routes/*",
+        "@middlewares": "dist/views/middlewares",
+        "@middlewares/*": "dist/views/middlewares/*",
+        "@controllers": "dist/views/controllers",
+        "@controllers/*": "dist/views/controllers/*"
+    },
+    "eslintConfig": {
+        "parser": "@typescript-eslint/parser",
+        "plugins": [
+            "@typescript-eslint"
+        ],
+        "extends": [
+            "eslint:recommended",
+            "plugin:@typescript-eslint/recommended",
+            "plugin:@typescript-eslint/recommended-requiring-type-checking"
+        ],
+        "parserOptions": {
+            "project": "./tsconfig.json"
+        },
+        "rules": {
+            "max-len": [
+                "error",
+                {
+                    "code": 100
+                }
+            ],
+            "no-console": 1,
+            "no-extra-boolean-cast": 0,
+            "@typescript-eslint/restrict-plus-operands": 0,
+            "@typescript-eslint/explicit-module-boundary-types": 0,
+            "@typescript-eslint/no-explicit-any": 0,
+            "@typescript-eslint/no-floating-promises": 0,
+            "@typescript-eslint/no-unsafe-member-access": 0,
+            "@typescript-eslint/no-unsafe-assignment": 0
+        }
+    },
+    "eslintIgnore": [
+        "build.ts",
+        ".vscode/templates/*.ts"
+    ],
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^6.1.1",
+        "@fortawesome/free-solid-svg-icons": "^6.1.1",
+        "@fortawesome/react-fontawesome": "^0.1.18",
+        "bcrypt": "^5.0.1",
+        "command-line-args": "^5.2.1",
+        "cookie-parser": "^1.4.6",
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.0",
+        "express": "^4.17.3",
+        "express-async-errors": "^3.1.1",
+        "helmet": "^5.0.2",
+        "http-status-codes": "^2.2.0",
+        "jet-logger": "^1.1.5",
+        "jsonfile": "^6.1.0",
+        "jsonwebtoken": "^8.5.1",
+        "lodash": "^4.17.21",
+        "marked": "^4.0.14",
+        "module-alias": "^2.2.2",
+        "mongodb": "^4.5.0",
+        "mongoose": "^6.2.10",
+        "mongoose-lean-defaults": "^2.1.0",
+        "mongoose-lean-getters": "^0.3.0",
+        "mongoose-lean-virtuals": "^0.9.0",
+        "morgan": "^1.10.0",
+        "passport": "^0.5.2",
+        "passport-jwt": "^4.0.0",
+        "react-youtube": "^9.0.1",
+        "slugify": "^1.6.5"
+    },
+    "devDependencies": {
+        "@types/bcrypt": "^5.0.0",
+        "@types/command-line-args": "^5.2.0",
+        "@types/cookie-parser": "^1.4.2",
+        "@types/cors": "^2.8.12",
+        "@types/express": "^4.17.13",
+        "@types/find": "^0.2.1",
+        "@types/fs-extra": "^9.0.13",
+        "@types/jasmine": "^4.0.2",
+        "@types/jsonfile": "^6.1.0",
+        "@types/jsonwebtoken": "^8.5.8",
+        "@types/lodash": "^4.14.181",
+        "@types/mongoose-lean-virtuals": "^0.5.2",
+        "@types/morgan": "^1.9.3",
+        "@types/node": "^17.0.23",
+        "@types/passport": "^1.0.7",
+        "@types/passport-jwt": "^3.0.6",
+        "@types/supertest": "^2.0.12",
+        "@typescript-eslint/eslint-plugin": "^5.18.0",
+        "@typescript-eslint/parser": "^5.18.0",
+        "concurrently": "^7.1.0",
+        "eslint": "^8.12.0",
+        "find": "^0.3.0",
+        "fs-extra": "^10.0.1",
+        "jasmine": "^4.0.2",
+        "nodemon": "^2.0.15",
+        "supertest": "^6.2.2",
+        "ts-node": "^10.7.0",
+        "tsconfig-paths": "^3.14.1",
+        "typescript": "^4.6.3"
+    }
+}

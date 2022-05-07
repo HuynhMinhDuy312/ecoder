@@ -1,0 +1,129 @@
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;   
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+$grayColor: #989898;
+$bluePrimary: #00ACEE;
+$orangePrimary: #F0592A;
+
+.authen {
+    margin: auto;
+    padding-top: 10%;
+    padding-bottom: 5%;
+    padding-left: 8%;
+    width: 1000px;
+    height: 700px;
+
+    &__container {
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url("https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80");
+        display: flex;
+        position: relative;
+        box-shadow: 0 0 20px rgb(0 0 0 / 30%);
+
+    }
+
+    &__heading {
+        font-size: 3.6rem;
+        font-weight: 700;
+    }
+
+    &__btn {
+        border: 3px solid white;
+        border-radius: 20px;
+        padding: 12px 24px;
+        font-size: 2.4rem;
+        margin-top: 36px;
+        font-weight: 700;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    &__left,
+    &__right {
+        width: 50%;
+        height: 100%;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    &__box{
+        position: absolute;
+        transform: translateX(100%);
+        background-color: white;
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__radio1 {
+
+        &:checked ~.authen__box {
+            animation: moveLeft 0.6s linear;
+            animation-fill-mode: forwards;
+        }
+
+        &:checked ~ .authen__box > .signup {
+            display: flex;
+            flex-direction: column;
+            animation: fadeIn 0.5s ease-in;
+        }
+    }
+
+    &__radio2 {
+
+        &:checked ~.authen__box {
+            animation: moveRight 0.6s linear;
+            animation-fill-mode: forwards;
+
+        }
+        
+        &:checked ~ .authen__box > .signin {
+            display: flex;
+            flex-direction: column;
+            animation: fadeIn 0.5s ease-in;
+        }
+    }
+
+}
+
+@keyframes moveLeft {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveRight {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+

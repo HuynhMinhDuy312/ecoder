@@ -1,0 +1,40 @@
+$grayColor: #989898;
+$bluePrimary: #00acee;
+$orangePrimary: #f0592a;
+
+.history {
+    width: 60%;
+    margin-left: 150px;
+    padding-top: 100px;
+    padding-bottom: 32px;
+
+    &__heading {
+        font-size: 3rem;
+        font-weight: 700;
+        line-height: 3rem;
+
+    }
+
+    &__quan {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        margin-top: 24px;
+        margin-bottom: 50px;
+    }
+
+    &__course {
+
+
+        &-heading {
+            font-size: 2.4rem;
+            font-weight: 600;
+            line-height: 3rem;
+        }
+
+        &-reg,
+        &-last {
+            font-size: 1.6rem;
+            line-height: 2rem;
+        }
+    }
+}

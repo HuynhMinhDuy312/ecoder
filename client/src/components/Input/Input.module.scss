@@ -1,0 +1,38 @@
+/******************************************
+*  Author : Nam Dinh   
+*  Created On : Mon Apr 25 2022
+*  File : Input.module.scss
+*******************************************/
+@use '@assets/scss/color.scss';
+
+.wrapper {
+    margin: 12px 0;
+
+    & .input {
+        width: 100%;
+        border: none;
+        border-bottom: 1px solid color.$grayColor;
+        padding: 12px 0;
+        font-size: 1.6rem;
+        outline: none;
+    }
+
+    & .error {
+        margin-top: 4px;
+        font-size: 1.4rem;
+        color: color.$orangePrimary;
+        font-weight: 700;
+        display: none;
+    }
+
+    &.onError input {
+        border-bottom: 2px solid color.$orangePrimary;
+        box-sizing: border-box;
+    }
+
+    &.onError:hover {
+        .error {
+            display: block;
+        }
+    }
+}

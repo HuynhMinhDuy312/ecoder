@@ -1,0 +1,90 @@
+.slider {
+    width: 100%;
+
+    &__img {
+        width: 1300px;
+        object-fit: fill;
+    }
+}
+
+.swiper {
+    width: 1300px;
+    height: 425px;
+    border-radius: 20px;
+}
+
+img {
+    object-fit: contain;
+}
+
+.swiper-pagination-bullet {
+    background-color: #dce0e3;
+    opacity: 1;
+    width: 30px;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #989898;
+    width: 50px;
+    height: 8px;
+    border-radius: 10px;
+}
+
+.my-custom-pagination {
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-button-prev-unique,
+.swiper-button-next-unique {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 2px 4px 5px rgb(0 0 0 / 20%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transform: translateY(-500%);
+    background-color: white;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.swiper-button-prev-unique {
+    left: 9.1%;
+    z-index: 100;
+}
+
+.swiper-button-next-unique {
+    right: 1.9%;
+    z-index: 100;
+}
+
+@media (min-width: 1900px) {
+    .swiper-button-prev-unique {
+        left: 17.5%;
+        z-index: 100;
+    }
+    
+    .swiper-button-next-unique {
+        right: 11.5%;
+        z-index: 100;
+    }
+
+    .slider {
+        width: 100%;
+    }
+
+}
+
+.LangSlide {
+
+    flex-direction: row;
+    justify-content: space-between;
+}

@@ -1,0 +1,138 @@
+@use '@assets/scss/attr.scss';
+
+.menu {
+    background-color: #fff;
+    margin-top: 70px;
+    height: 1000px;
+    width: attr.$menuWidth;
+    position: fixed;
+    box-shadow: 5px 10px 10px rgb(0 0 0 / 20%);
+    z-index: 1000;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding-left: 0;
+    }
+
+    &__item {
+        margin: 12px;
+        position: relative;
+        padding: 12px 0;
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        &:hover {
+            border-radius: 15px;
+            background-color: #ccc;
+        }
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+    }
+
+    &__text {
+        margin-top: 4px;
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    &__langtype {
+        width: 300px;
+        position: absolute;
+        display: none;
+        top: 0;
+        left: 100%;
+        margin-left: 32px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 45px;
+            height: 265px;
+            top: 0;
+            left: -12%;
+        }
+    }
+
+    &__hover {
+        &:hover .menu__langtype {
+            display: block;
+        }
+    }
+}
+
+$bluePrimary: #00acee;
+
+.LangType {
+    width: 100%;
+    margin-right: 24px;
+
+    &__heading {
+        padding: 24px;
+        background-color: #f8f8f8;
+        color: $bluePrimary;
+        font-weight: 700;
+        font-size: 2.4rem;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+    }
+
+    &__list {
+        list-style: none;
+        padding-left: 0;
+        height: 82%;
+        background-color: #f8f8f8;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    &__item {
+        font-size: 2rem;
+
+        &:hover {
+            background-color: $bluePrimary;
+            color: white;
+            opacity: 0.8;
+        }
+
+        &:last-child {
+            border-bottom-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+        }
+    }
+
+    &__link {
+        display: block;
+        padding: 16px 24px;
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1900px) {
+    .menu__langtype {
+        left: 0;
+
+        &::after {
+            width: 75px;
+            height: 265px;
+            top: 0;
+            left: 10%;
+        }
+    }
+
+    .LangType {
+        width: 100%;
+        margin-left: 100px;
+    }
+}

@@ -1,0 +1,107 @@
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+$grayColor: #989898;
+$bluePrimary: #00acee;
+$orangePrimary: #f0592a;
+
+.cpl {
+    width: 100%;
+    margin-left: 24px;
+    border: 1px solid #e5e5e5;
+    border-radius: 15px;
+    padding: 32px;
+    display: flex;
+    align-items: center;
+
+    &__right {
+        flex: 1;
+        height: 144px;
+        margin-left: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__img {
+        height: 144px;
+        border-radius: 15px;
+    }
+
+    &__heading {
+        font-size: 2rem;
+        line-height: 2rem;
+        font-weight: 700;
+        justify-self: flex-start;
+    }
+
+    &__desc {
+        margin: 12px 0;
+        font-size: 1.6rem;
+        line-height: 1.6rem;
+    }
+
+    &__button {
+        margin-left: auto;
+    }
+    
+    &__btn {
+        font-size: 1.6rem;
+        font-weight: 700;
+        color: white;
+        background-color: $bluePrimary;
+        padding: 12px 24px;
+        border-radius: 20px;
+        border: none;
+        text-align: center;
+        text-decoration: none;
+        margin-left: 24px;
+        box-shadow: 2px 2px 5px rgb(0 0 0 / 50%);
+
+        &.cpl__lowPriority {
+            color: black;
+            background-color: white;
+        }
+
+        &:hover {
+            cursor: pointer;
+            opacity: 0.9;
+        }
+    }
+
+    &__function {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 8px;
+        position: absolute;
+        font-size: 3rem;
+        bottom: 10%;
+        right: 3%;
+
+        &-bm {
+            color: $bluePrimary;
+
+            &:hover {
+                cursor: pointer;
+                animation: moveUpSmall 0.3s linear;
+                animation-fill-mode: forwards;
+            }
+        }
+
+        &-later {
+            color: $orangePrimary;
+            margin-left: 32px;
+            &:hover {
+                cursor: pointer;
+                animation: moveUpSmall 0.3s linear;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+}

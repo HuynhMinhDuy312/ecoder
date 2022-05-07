@@ -1,0 +1,36 @@
+$grayColor: #989898;
+$bluePrimary: #00acee;
+$orangePrimary: #f0592a;
+
+.courses {
+    width: 60%;
+    margin-left: 150px;
+    padding-top: 60px;
+    padding-bottom: 32px;
+
+    &__heading {
+        font-size: 3rem;
+        line-height: 3rem;
+        font-weight: 700;
+        margin-top: 50px;
+    }
+
+    &__desc {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        margin-top: 12px;
+    }
+
+    &__note {
+        font-size: 1.4rem;
+        border-left: 2.5px solid $bluePrimary;
+        margin: 24px;
+        padding-left: 12px;
+        line-height: 2.4rem;
+
+        &-icon {
+            color: red;
+            margin-left: 8px;
+        }
+    }
+}

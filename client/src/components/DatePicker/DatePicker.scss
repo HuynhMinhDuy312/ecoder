@@ -1,0 +1,68 @@
+/******************************************
+*  Author : Nam Dinh   
+*  Created On : Mon Apr 25 2022
+*  File : DatePicker.scss
+*******************************************/
+@use '@assets/scss/color.scss';
+
+.datepicker__wrapper {
+    position: relative;
+    margin: 12px 0;
+
+    & .datepicker__error {
+        margin-top: 4px;
+        font-size: 1.4rem;
+        color: color.$orangePrimary;
+        font-weight: 700;
+        display: none;
+    }
+
+    &.datepicker__has_error input {
+        border-bottom: 1px solid color.$orangePrimary;
+        box-sizing: border-box;
+    }
+
+    &.datepicker__has_error:hover {
+        .datepicker__error {
+            display: block;
+        }
+    }
+}
+
+.react-datepicker {
+    &__current-month {
+        font-size: 1.4rem;
+    }
+
+    &__day-name,
+    &__day {
+        font-size: 1.2rem;
+        padding: 4px;
+        width: 2rem;
+        line-height: 2rem;
+        margin: 0.4rem;
+    }
+
+    &__input-container {
+        input {
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid #989898;
+            padding: 12px 0;
+            font-size: 1.6rem;
+            outline: none;
+        }
+    }
+
+    &-popper[data-placement^='bottom'] {
+        inset: unset !important;
+        transform: unset !important;
+        top: 100% !important;
+        left: 0 !important;
+    }
+
+    &__triangle {
+        transform: unset !important;
+        left: 12% !important;
+    }
+}

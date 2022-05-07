@@ -1,0 +1,11 @@
+export { default as studentRouter } from './student-router';
+export { default as userRouter } from './user-router';
+export { default as roleRouter } from './role-router';
+export { default as languageRouter } from './language-router';
+export { default as buildStatusRouter } from './build-status-router';
+export { default as courseLevelRouter } from './course-level-router';
+export { default as courseRouter } from './course-router';
+export { default as lessonRouter } from './lesson-router';
+export { default as chapterRouter } from './chapter-router';
+export { default as authRouter } from './auth-router';
+export { default as testRouter } from './test-router';

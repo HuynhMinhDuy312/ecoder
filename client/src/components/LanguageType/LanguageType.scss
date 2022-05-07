@@ -1,0 +1,44 @@
+$bluePrimary: #00ACEE;
+
+.LangType {
+    width: 20%;
+    margin-right: 24px;
+    margin-left: 32px;
+    
+
+    &__heading {
+        padding: 24px;
+        background-color: $bluePrimary;
+        text-align: center;
+        color:white;
+        border-radius: 20px;
+        font-weight: 700;
+    }
+
+    &__list {
+        list-style: none;
+        padding-left: 0;
+        height: 82%;
+        background-color: #f8f8f8;
+        margin-top: 12px;
+    }
+
+    &__item {
+        padding: 16px 24px;
+        font-size: 2rem;
+
+        &:hover {
+            background-color: $bluePrimary;
+            color: white;
+            cursor: pointer;
+            opacity: 0.8;
+        }
+    }
+}
+
+@media (min-width: 1900px) {
+    .LangType {
+        width: 20%;
+        margin-left: 100px;
+    }
+}

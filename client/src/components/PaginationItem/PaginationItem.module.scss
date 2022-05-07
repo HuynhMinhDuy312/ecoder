@@ -1,0 +1,29 @@
+@use '@assets/scss/color.scss';
+
+.page {
+    color: color.$black;
+    font-size: 1.6rem;
+    padding: 2px 0;
+
+    .pageText {
+        display: block;
+        padding: 8px 12px;
+        border-radius: 4px;
+        font-weight: 700;
+        text-align: center;
+
+        &.pageSelected {
+            background-color: color.$orangePrimary;
+            color: color.$white;
+        }
+    }
+
+    .pageText {
+        cursor: pointer;
+
+        &:not(.pageSelected):hover {
+            height: 100%;
+            background-color: color.$hover-on-white-background;
+        }
+    }
+}

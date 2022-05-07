@@ -1,0 +1,29 @@
+/******************************************
+*  Author : Nam Dinh   
+*  Created On : Mon Apr 25 2022
+*  File : FormError.module.scss
+*******************************************/
+
+@use '@assets/scss/color.scss';
+
+.formError {
+    display: flex;
+    align-items: center;
+    background-color: color.$orangePrimary;
+    margin-top: 8px;
+    padding: 8px;
+    border-radius: 4px;
+    
+    &Icon {
+        line-height: 1.6rem;
+        fill: color.$white;
+        font-size: 1.6rem;
+        margin-right: 12px;
+    }
+
+    &Text {
+        font-size: 1.6rem;
+        color: color.$white;
+        font-weight: 600;
+    }
+}

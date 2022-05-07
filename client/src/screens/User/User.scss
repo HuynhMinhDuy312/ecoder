@@ -1,0 +1,118 @@
+@use '@assets/scss/attr.scss';
+@use '@assets/scss/color.scss';
+
+$grayColor: #989898;
+$bluePrimary: #00acee;
+$orangePrimary: #f0592a;
+
+.user {
+    margin-left: attr.$menuWidth;
+    font-size: 2.4rem;
+    padding-top: 70px;
+    padding-bottom: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+
+    * {
+        box-sizing: inherit;
+    }
+
+    &__profile {
+        position: relative;
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    &__background {
+        width: 100%;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    &__avt {
+        $img-height: 150px;
+        position: absolute;
+        height: $img-height;
+        display: flex;
+        align-items: center;
+        left: 15px;
+        bottom: -($img-height / 2 + 30px);
+
+        &-img {
+            height: $img-height;
+            border-radius: 50%;
+            padding: 5px;
+            background-color: white;
+        }
+
+        &-name {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-left: 16px;
+        }
+    }
+
+    &__container {
+        margin-top: 150px;
+        display: flex;
+        flex-direction: row;
+        width: 75%;
+        justify-content: space-around;
+    }
+
+    &__left {
+        width: 40%;
+    }
+
+    &__right {
+        width: 55%;
+        margin-left: 50px;
+        margin-right: 32px;
+    }
+
+    &__box {
+        width: 100%;
+        border-radius: 10px;
+        padding: 12px 24px;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+        margin-bottom: 24px;
+        box-sizing: border-box;
+        position: relative;
+
+        * {
+            box-sizing: inherit;
+        }
+
+        &-heading {
+            position: absolute;
+            top: 0;
+            transform: translateY(-50%);
+            background-color: color.$white;
+            font-size: 2.2rem;
+            font-weight: 600;
+            line-height: 3rem;
+            margin-bottom: 8px;
+        }
+
+        &-desc {
+            font-size: 1.8rem;
+            line-height: 2rem;
+            margin-bottom: 4px;
+            margin-top: 8px;
+        }
+
+        &-icon {
+            width: 24px;
+            text-align: center;
+            margin-right: 12px;
+        }
+    }
+
+    &__no-course {
+        display: block;
+        font-size: 1.6rem;
+        margin-top: 8px;
+    }
+}
